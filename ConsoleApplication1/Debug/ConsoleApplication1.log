@@ -1,0 +1,16 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Find.cpp
+f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(13): error C2276: “!”: 绑定成员函数表达式上的非法操作
+f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(16): error C2561: “InputID”: 函数必须返回值
+  f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(11): note: 参见“InputID”的声明
+f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(27): error C2228: “.setCataloge”的左边必须有类/结构/联合
+  f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(27): note: 类型是“std::vector<Scenario,std::allocator<_Ty>> *”
+          with
+          [
+              _Ty=Scenario
+          ]
+  f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(27): note: 是否改用“->”?
+f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(31): error C2228: “.appendLog”的左边必须有类/结构/联合
+  f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(31): note: 类型是“Item *”
+  f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(31): note: 是否改用“->”?
+f:\研一\visual studio\consoleapplication1\consoleapplication1\find.cpp(31): error C2143: 语法错误: 缺少“)”(在“;”的前面)
