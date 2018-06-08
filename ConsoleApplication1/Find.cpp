@@ -15,23 +15,41 @@ vector<Scenario> InputID(string fileName) {
 		cout << "Error opening infile!" << endl;
 		return;
 	}
-	vector<Scenario> *Scen;
-	Scenario V;
+	vector<Scenario> scen;//作为返回值输出
+	Scenario *v;
+	Item *i;
 	string line;
 	string title;
 	string s;
-	Item *i;
 	while (infile>>s) {
 		if (s[0] == 'S') {
-			Scen = new vector<Scenario>;
-			*Scen.setCataloge(s);
+			if(v!=NULL){
+				scen.push_back(v);
+			}
+			v=new Scenario();//如果是空则新建对象
+			continue;
 		}
-		i = new Item();
-		if (//atoi no exception)
-			i.appendLog(line, title);
+		if(atoi(s.c_str())==0){
+			//这个条件要再看一下，我在办公室不记得查到是啥来着了
+			//说明读到了个break之类的
+			if(i==null){
+				//说明此时item是空的，没有加载的对象，需要新建并且确定其属性
+				i=new Item();
+				i.setCatalog(s);
+			}else if(s!=i.getCatalog()){
+				//之前item与当前读到的类型不一样，如当前item是break但读到了leak
+				v.push_back(i);
+				i=new Item();
+				i.setCatalog(s);
+			}
+			continue;
+		}else{
+			//转换成数字不报错，则读到的为ID，且应为当前item的类型
+			i.appendLog(s);//这个参数应该改一下，只要line就行了
+		}
 	}
 	infile.close();
-	return *Scen;
+	return scen;
 }
 int main() {
 	vector<Scenario> Scen;
